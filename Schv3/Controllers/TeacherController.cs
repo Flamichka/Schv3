@@ -1,36 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Schv3.Models;
 using System.Diagnostics;
 
 namespace Schv3.Controllers
 {
-    public class HomeController : Controller
+    public class TeacherController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<TeacherController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public TeacherController(ILogger<TeacherController> logger)
         {
             _logger = logger;
         }
         [HttpGet]
 
         //METHOD TO DISPLAY RANDOM SHIT ON A PAGE
-        public IActionResult MainPage()
-        {
-            return View();
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Schedule() 
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
+        public IActionResult Teacher()
         {
             return View();
         }
@@ -41,5 +27,4 @@ namespace Schv3.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
-
 }

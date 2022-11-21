@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Расписание студента";
+}
+
+<!-- This information is hardcoded. Need model to work with it-->
+<form name="student_form">
+    <div class="forma1">
+        <label for="number_of_group">Выберите вашу группу:</label>
+
+        <input list="character" id="group" name="group_name">
+        <datalist id="character">
+            <option value="ИС"></option>
+            <option value="ПИ"></option>
+            <option value="УТС"></option>
+        </datalist>
+    </div>
+    <br>
+    <div class="forma2">
+        <label for="number_of_weeek">Выберите неделю:</label>
+
+        <input list="character2" id="week" name="week_name">
+        <datalist id="character2">
+            <option value="1 неделя"></option>
+            <option value="2 неделя"></option>
+            <option value="3 неделя"></option>
+        </datalist>
+
+    </div>
+
+   
+
+    <div>
+        <button type="button" class="btn btn-info btn-lg" id="this_week" name="this_week">
+            <i class="fa-regular fa-calendar-days"></i> Эта неделя
+        </button>
+
+        <button type="button" class="btn btn-info btn-lg" id="next_week" name="next_week">
+            <i class="fa-solid fa-calendar-week"></i> Следующая неделя
+        </button>
+
+        <button type="button" class="btn btn-info btn-lg" id="search" name="search" action="submit">
+        <i class="fa-solid fa-magnifying-glass"></i> Поиск
+        </button>
+    </div>
+
+</form>

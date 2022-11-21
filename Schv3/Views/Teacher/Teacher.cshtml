@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Расписание преподавателя";
+}
+<!-- This information is hardcoded. Need model to work with it-->
+<div class="forma1">
+    <label for="name_of_teacher">Введите ФИО преподавателя:</label>
+
+    <input list="character" id="FIO" name="teacher_name">
+    <datalist id="character">
+        <option value="Абрамович Александра Юрьевна"></option>
+        <option value="Лушина Виктория Сергеевна"></option>
+        <option value="Сметанина Татьяна Ивановна"></option>
+    </datalist>
+
+</div>
+
+<div class="forma2">
+    <label for="number_of_weeek">Выберите неделю:</label>
+
+    <input list="character2" id="week" name="week_name">
+    <datalist id="character2">
+        <option value="1 неделя"></option>
+        <option value="2 неделя"></option>
+        <option value="3 неделя"></option>
+    </datalist>
+
+</div>
+
+<div>
+    <button type="button" class="btn btn-info btn-lg" id="this_week" name="this_week">
+            <i class="fa-regular fa-calendar-days"></i> Эта неделя
+    </button>
+
+    <button type="button" class="btn btn-info btn-lg" id="next_week" name="next_week">
+            <i class="fa-solid fa-calendar-week"></i> Следующая неделя
+    </button>
+
+    <button type="button" class="btn btn-info btn-lg" id="search" name="search" action="submit">
+        <i class="fa-solid fa-magnifying-glass"></i> Поиск
+    </button>
+</div>
