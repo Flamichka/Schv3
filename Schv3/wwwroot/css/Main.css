@@ -16,12 +16,12 @@
     z-index: -1;
 }
 
-.header-menu button{
+.header-menu a{
     margin:10px;
     font-size:24px;
 }
 
-.header-menu button:hover {
+.header-menu a:hover {
     color:whitesmoke;
 }
 
