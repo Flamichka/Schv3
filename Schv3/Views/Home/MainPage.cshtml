@@ -1,4 +1,5 @@
 ﻿<link rel="stylesheet" href="~/css/Main.css" asp-append-version="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 @{
     ViewData["Title"] = "Главная";
 }
@@ -8,13 +9,12 @@
 
     <div class="buttons">
         <div class="header-menu">
-            <a class="btn btn-info btn-group-lg" asp-area="" asp-controller="Student" asp-action="Student">Студент</a>
+            <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Student" asp-action="Student">Студент</a>
         </div>
 
         <div class="header-menu">
-           <a class="btn btn-info btn-group-lg" asp-area="" asp-controller="Teacher" asp-action="Teacher">Преподаватель</a> 
+           <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Teacher" asp-action="Teacher">Преподаватель</a> 
         </div>
-
     </div>
     <div class="start_image">
         <svg width="879" height="440" viewBox="0 0 879 440" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
