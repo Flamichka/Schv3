@@ -25,8 +25,9 @@ function checkWeek(val) {
     }
 }
 
-function getWeek(val){
-    let start = new Date('09/01/2022');
+function getWeek(val) {
+    let thisYear = new Date().getFullYear();
+    let start = new Date('09/01/' + thisYear);
     let today = new Date();
     const week = (start, today) => {
         let difference = today.getTime() - start.getTime();
