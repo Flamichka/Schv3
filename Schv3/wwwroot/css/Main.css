@@ -1,43 +1,33 @@
 ﻿
 .header-menu {
     width: 100%;
-    margin: 0 auto;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .header-menu::before {
     content: '';
-    display: flex;
     height: 96px;
     width: 19%;
-    background: #F5F5F5;
+    background: white;
     position: absolute;
     left: 0;
     z-index: -1;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    height: 96px;
+.header-menu button{
+    margin:10px;
+    font-size:24px;
 }
 
-ul li {
-    float: none;
+.header-menu button:hover {
+    color:whitesmoke;
 }
 
-ul li a {
-    color: #000;
-    display: block;
-    height: 96px;
-    padding: 0 20px;
-    text-decoration: none;
-    line-height: 96px;
-    justify-content: center;
-}
-
-ul li a:hover {
-    background: #fff;
+.start_image{
+    display: flex;
+    justify-content:center;
 }
 
 /*#Student {
