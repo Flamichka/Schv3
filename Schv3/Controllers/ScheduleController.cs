@@ -5,18 +5,32 @@ using System.Diagnostics;
 
 namespace Schv3.Controllers
 {
-    public class TeacherController : Controller
+    public class ScheduleController : Controller
     {
-        private readonly ILogger<TeacherController> _logger;
+        private readonly ILogger<ScheduleController> _logger;
 
-        public TeacherController(ILogger<TeacherController> logger)
+        public ScheduleController(ILogger<ScheduleController> logger)
         {
             _logger = logger;
         }
         [HttpGet]
 
-        //METHOD TO DISPLAY RANDOM SHIT ON A PAGE
+        public IActionResult Student()
+        {
+            return View();
+        }
+
         public IActionResult Teacher()
+        {
+            return View();
+        }
+
+        public IActionResult Schedule()
+        {
+            return View();
+        }
+
+        public IActionResult Search()
         {
             return View();
         }
