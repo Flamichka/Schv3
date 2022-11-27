@@ -1,5 +1,4 @@
-﻿
-function checkGroupOrFio(val) {
+﻿function checkGroupOrFio(val) {
     console.log(val);
     if (val == "") {
         document.getElementById("week").disabled = true;
@@ -31,10 +30,18 @@ function getWeek(val) {
     let today = new Date();
     const week = (start, today) => {
         let difference = today.getTime() - start.getTime();
-        let total_week = Math.ceil(difference / (1000 * 3600 * 24*7));
-        return total_week+val;
+        let total_week = Math.ceil(difference / (1000 * 3600 * 24 * 7));
+        return total_week + val;
     }
     document.getElementById("week").value = week(start, today) + " неделя";
     document.getElementById("show_schedule").removeAttribute("disabled");
     console.log(week(start, today));
+}
+
+function goToSchedule() {
+    window.location = "Schedule";
+}
+
+function goToSearch() {
+    window.location = "Search";
 }
