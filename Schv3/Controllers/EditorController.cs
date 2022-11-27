@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Schv3.Models;
 using System.Diagnostics;
@@ -14,9 +15,21 @@ namespace Schv3.Controllers
             _logger = logger;
         }
         [HttpGet]
+        [Authorize]
 
-        //METHOD TO DISPLAY RANDOM SHIT ON A PAGE
         public IActionResult Editor()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult AddSched()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult ViewSched()
         {
             return View();
         }

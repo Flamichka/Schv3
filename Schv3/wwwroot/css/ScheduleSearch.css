@@ -1,3 +1,20 @@
-.schedule_form_item{
-    margin: 10px;
+.schedule_form_item {
+    margin: 1vh;
+}
+
+button {
+    margin: 1vh;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+}
+
+button svg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    width: 2vh;
+    height: 2vh;
 }

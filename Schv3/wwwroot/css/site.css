@@ -14,28 +14,12 @@ html {
 }
 
 body {
-  margin-bottom: 30px;
+  margin-bottom: 3vh;
 }
 
-button {
-    margin: 10px;
-    padding:0;
-    align-items:center;
-    text-align: center;
-}
-
-button svg {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-}
 
 footer{
     position: absolute;
     width:100%;
-    max-height: 10px
+    max-height: 1vh;
 }

@@ -6,16 +6,31 @@
 
 <!--Project Athena-->
 <body>
-
-    <div class="buttons">
+    @if (User.Identity.IsAuthenticated)
+    {
         <div class="header-menu">
-            <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Schedule" asp-action="Student">Студент</a>
-        </div>
+            <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="AddSched">Добавление</a>
 
-        <div class="header-menu">
-            <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Schedule" asp-action="Teacher">Преподаватель</a>
         </div>
-    </div>
+        <div class="header-menu">
+            <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="Editor">Редактор</a>
+        </div>
+        <div class="header-menu">
+            <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="ViewSched">Просмотр</a>
+        </div>
+    }
+    else
+    {
+        <div class="buttons">
+            <div class="header-menu">
+                <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Schedule" asp-action="Student">Студент</a>
+            </div>
+
+            <div class="header-menu">
+                <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Schedule" asp-action="Teacher">Преподаватель</a>
+            </div>
+        </div>
+    }
     <div class="start_image">
         <svg width="879" height="440" viewBox="0 0 879 440" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="879" height="440" fill="url(#pattern0)" />
