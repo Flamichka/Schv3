@@ -10,11 +10,8 @@ button {
 }
 
 button svg {
+    margin-bottom: 0.5vh;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    vertical-align: middle;
     width: 2vh;
     height: 2vh;
 }

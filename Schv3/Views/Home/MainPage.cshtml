@@ -9,25 +9,25 @@
     @if (User.Identity.IsAuthenticated)
     {
         <div class="header-menu">
-            <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="AddSched">Добавление</a>
+            <a class="btn btn-primary btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="AddSched">Добавление</a>
 
         </div>
         <div class="header-menu">
-            <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="Editor">Редактор</a>
+            <a class="btn btn-primary btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="Editor">Редактор</a>
         </div>
         <div class="header-menu">
-            <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="ViewSched">Просмотр</a>
+            <a class="btn btn-primary btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="ViewSched">Просмотр</a>
         </div>
     }
     else
     {
         <div class="buttons">
             <div class="header-menu">
-                <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Schedule" asp-action="Student">Студент</a>
+                <a class="btn btn-primary btn-group-lg rounded-pill" asp-area="" asp-controller="Schedule" asp-action="Student">Студент</a>
             </div>
 
             <div class="header-menu">
-                <a class="btn btn-info btn-group-lg rounded-pill" asp-area="" asp-controller="Schedule" asp-action="Teacher">Преподаватель</a>
+                <a class="btn btn-primary btn-group-lg rounded-pill" asp-area="" asp-controller="Schedule" asp-action="Teacher">Преподаватель</a>
             </div>
         </div>
     }
