@@ -7,92 +7,104 @@
 
 <div>
     <div class="schedule_add_item">
-        <button class="btn btn-primary btn-lg rounded-pill">
+        <button class="btn btn-primary rounded-pill">
             Добавить дисциплину
         </button>
-        <button class="btn btn-primary btn-lg rounded-pill">
+        <button class="btn btn-primary rounded-pill">
             Добавить группу
         </button>
-        <button class="btn btn-primary btn-lg rounded-pill">
+        <button class="btn btn-primary rounded-pill">
             Добавить преподавателя
         </button>
     </div>
-    <div class="schedule_add_item">
+   <div class="adding-form">
+        <div class="schedule_add_item">
 
-        <div class="schedule_add_item">
-            <label for="lesson_date">Дата пары:</label>
-            <input type="date" class="rounded-pill" id="lessonDate" name="lessonDate">
+            <div class="schedule_add_item">
+                <label for="lesson_date">Дата пары:</label>
+                <input type="date" class="rounded-pill" id="lessonDate" name="lessonDate">
+            </div>
+            <div class="schedule_add_item">
+                <label for="subject_name">Выберите дисциплину:</label>
+                <input class="rounded-pill" list="subject_list" id="subject" name="subject_name">
+                <datalist id="subject_list">
+                    <option value="Web-Технологии"></option>
+                    <option value="Методы исследования операций"></option>
+                    <option value="Моделирование систем"></option>
+                </datalist>
+            </div>
+            <div class="schedule_add_item">
+                <label for="group_name">Выберите группу:</label>
+                <input class="rounded-pill" list="group_list" id="group" name="group_name">
+                <datalist id="group_list">
+                    <option value="ИС"></option>
+                    <option value="ПИ"></option>
+                    <option value="УТС"></option>
+                </datalist>
+            </div>
+            <div class="schedule_add_item">
+                <label for="teacher_name">Выберите преподавателя:</label>
+                <input class="rounded-pill" list="teacher_list" id="teacher" name="teacher_name">
+                <datalist id="teacher_list">
+                    <option value="Карлусов В.Ю."></option>
+                    <option value="Хохлов В.В."></option>
+                    <option value="Дрозин А.Ю."></option>
+                </datalist>
+            </div>
+            <div class="schedule_add_item">
+                <label for="room_name">Выберите аудиторию:</label>
+                <input class="rounded-pill" list="room_list" id="room" name="room_name">
+                <datalist id="room_list">
+                    <option value="Б-507"></option>
+                    <option value="Г-512"></option>
+                    <option value="А-505"></option>
+                </datalist>
+            </div>
+            <label for="type_of_lesson"> Тип занятия</label>
+            <div class="schedule_add_item" id="type_of_lesson">
+                <label for="practicLesson">
+                    Практическое занятие
+                </label>
+                <input type="radio" name="type" value="PL" id="practicLesson" />
+                <label for="labLesson">
+                    Лабораторное занятие
+                </label>
+                <input type="radio" name="type" value="LL" id="labLesson" />
+                <label for="lecture">
+                    Лекция
+                </label>
+                <input type="radio" name="type" value="L" id="lecture" />
+            </div>
+        </div>
+
+        <div class="schedule_range_item">
+            <label for="lesson">Номер пары</label><br />
+            <input type="range" min="1" max="8" step="1" id="lesson" list="lessonNumber">
+            <datalist id="lessonNumber">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+            </datalist>
+        </div>
+        <div>
+            <input type="text" id="commentary" placeholder="Добавить комментарий" />
         </div>
         <div class="schedule_add_item">
-            <label for="subject_name">Выберите дисциплину:</label>
-            <input class="rounded-pill" list="subject_list" id="subject" name="subject_name">
-            <datalist id="subject_list">
-                <option value="Web-Технологии"></option>
-                <option value="Методы исследования операций"></option>
-                <option value="Моделирование систем"></option>
-            </datalist>
-       </div>
-        <div class="schedule_add_item">
-            <label for="group_name">Выберите группу:</label>
-            <input class="rounded-pill" list="group_list" id="group" name="group_name">
-            <datalist id="group_list">
-                <option value="ИС"></option>
-                <option value="ПИ"></option>
-                <option value="УТС"></option>
-            </datalist>
-       </div>
-        <div class="schedule_add_item">
-            <label for="teacher_name">Выберите преподавателя:</label>
-            <input class="rounded-pill" list="teacher_list" id="teacher" name="teacher_name">
-            <datalist id="teacher_list">
-                <option value="Карлусов В.Ю."></option>
-                <option value="Хохлов В.В."></option>
-                <option value="Дрозин А.Ю."></option>
-            </datalist>
-       </div>
-        <div class="schedule_add_item">
-            <label for="room_name">Выберите аудиторию:</label>
-            <input class="rounded-pill" list="room_list" id="room" name="room_name">
-            <datalist id="room_list">
-                <option value="Б-507"></option>
-                <option value="Г-512"></option>
-                <option value="А-505"></option>
-            </datalist>
+            <button class="btn btn-primary rounded-pill">
+                Добавить
+            </button>
         </div>
-        <label for="type_of_lesson"> Тип занятия</label>
-        <div class="schedule_add_item" id="type_of_lesson">
-            <label for="practicLesson">
-                Практическое занятие
-            </label>
-            <input type="radio" name="type" value="PL" id="practicLesson" />
-            <label for="labLesson">
-                Лабораторное занятие
-            </label>
-            <input type="radio" name="type" value="LL" id="labLesson" />
-            <label for="lecture">
-                Лекция
-            </label>
-            <input type="radio" name="type" value="L" id="lecture" />
-        </div>
-    </div>
-    
+   </div>
     <div class="schedule_add_item">
-        <label for="lesson">Номер пары</label>
-        <input type="range" min="0" max="8" step="1" id="lesson">
-    </div>
-    <div>
-        <input type="text" id="commentary" placeholder="Добавить комментарий" />
-    </div>
-    <div class="schedule_add_item">
-        <button class="btn btn-primary btn-lg rounded-pill">
-            Добавить
-        </button>
-    </div>
-    <div class="schedule_add_item">
-        <button class="btn btn-primary btn-lg rounded-pill">
+        <button class="btn btn-primary rounded-pill">
             Просмотр(Студент)
         </button>
-        <button class="btn btn-primary btn-lg rounded-pill">
+        <button class="btn btn-primary rounded-pill">
             Просмотр(Преподаватель)
         </button>
     </div>
