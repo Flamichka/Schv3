@@ -25,11 +25,6 @@ namespace Schv3.Controllers
             return View();
         }
 
-        public IActionResult Schedule() 
-        {
-            return View();
-        }
-
         public IActionResult Privacy()
         {
             return View();

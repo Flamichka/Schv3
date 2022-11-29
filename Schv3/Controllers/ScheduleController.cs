@@ -1,35 +1,36 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Schv3.Models;
 using System.Diagnostics;
 
 namespace Schv3.Controllers
 {
-    public class EditorController : Controller
+    public class ScheduleController : Controller
     {
-        private readonly ILogger<EditorController> _logger;
+        private readonly ILogger<ScheduleController> _logger;
 
-        public EditorController(ILogger<EditorController> logger)
+        public ScheduleController(ILogger<ScheduleController> logger)
         {
             _logger = logger;
         }
         [HttpGet]
-        [Authorize]
 
-        public IActionResult Editor()
+        public IActionResult Student()
         {
             return View();
         }
 
-        [Authorize]
-        public IActionResult AddSched()
+        public IActionResult Teacher()
         {
             return View();
         }
 
-        [Authorize]
-        public IActionResult ViewSched()
+        public IActionResult Schedule()
+        {
+            return View();
+        }
+
+        public IActionResult Search()
         {
             return View();
         }
