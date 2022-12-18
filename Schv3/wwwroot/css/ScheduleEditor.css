@@ -1,0 +1,27 @@
+﻿body {
+}
+
+.schedule_add_item{
+    margin-top:1vh;
+    margin-bottom:1vh;
+}
+
+input[type=range] {
+    width: 30%;
+    margin-left: 1vh;
+    cursor: pointer;
+}
+
+.schedule_range_item {
+    margin: 3vh;
+    align-content:center;
+}
+
+.adding-form{
+    border:solid;
+    border-top-width: 0.5vh;
+    border-bottom-width: 0.5vh;
+    border-left-width:0;
+    border-right-width:0;
+    border-color:lightgrey;
+}

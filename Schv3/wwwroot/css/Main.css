@@ -1,0 +1,36 @@
+﻿
+.header-menu {
+    width: 100%;
+    margin: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
+.header-menu::before {
+    content: '';
+    height: 96px;
+    width: 19%;
+    background: white;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.header-menu a{
+    margin:1vh;
+    font-size:24px;
+}
+
+.header-menu a:hover {
+    color:whitesmoke;
+}
+
+.start_image{
+    margin: 1vh;
+    display: flex;
+    justify-content:center;
+}
+
+.start_image svg{
+    height:fit-content
+}
