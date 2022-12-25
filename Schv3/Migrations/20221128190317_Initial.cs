@@ -51,7 +51,7 @@ namespace Schv3.Migrations
                 name: "Groups",
                 columns: table => new
                 {
-                    GrouoCode = table.Column<int>(type: "INTEGER", nullable: false)
+                    GroupCode = table.Column<string>(type: "TEXT", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Quantity = table.Column<int>(type: "INTEGER", nullable: false),
                     Institute = table.Column<string>(type: "TEXT", nullable: false),
@@ -61,7 +61,7 @@ namespace Schv3.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Groups", x => x.GrouoCode);
+                    table.PrimaryKey("PK_Groups", x => x.GroupCode);
                 });
 
             migrationBuilder.CreateTable(

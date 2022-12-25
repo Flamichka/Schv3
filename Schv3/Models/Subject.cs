@@ -8,6 +8,6 @@ namespace Schv3.Models
         [Key] [Required] public int Id { get; set; }
         [Required] public string Name { get; set; }
         [Required] public int Hours { get; set; }
-        [Required] public int Id_teacher { get; set; }
+        [Required] public List<Teacher> Id_teacher { get; set; }
     }
 }

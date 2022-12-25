@@ -7,3 +7,4 @@ namespace Schv3.Interfaces
         IEnumerable<Schedule> schedules { get; }   
     }
 }
+

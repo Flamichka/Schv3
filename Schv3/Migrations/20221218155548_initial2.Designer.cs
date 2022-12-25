@@ -11,8 +11,8 @@ using Schv3.Data;
 namespace Schv3.Migrations
 {
     [DbContext(typeof(AppDataDbContext))]
-    [Migration("20221218103903_new")]
-    partial class @new
+    [Migration("20221218155548_initial2")]
+    partial class initial2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

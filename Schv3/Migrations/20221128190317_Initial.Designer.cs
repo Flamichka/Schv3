@@ -73,7 +73,7 @@ namespace Schv3.Migrations
 
             modelBuilder.Entity("Schv3.Models.Group", b =>
                 {
-                    b.Property<int>("GrouoCode")
+                    b.Property<int>("GroupCode")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -93,7 +93,7 @@ namespace Schv3.Migrations
                     b.Property<int>("study_form")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("GrouoCode");
+                    b.HasKey("GroupCode");
 
                     b.ToTable("Groups");
                 });

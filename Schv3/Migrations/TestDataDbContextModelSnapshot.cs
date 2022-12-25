@@ -29,19 +29,20 @@ namespace Schv3.Migrations
                     b.Property<int>("Comment")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Group_Code")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("Id_Classroom")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Id_Subject")
+                    b.Property<int>("Id_SubjectId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Id_Teacher")
+                    b.Property<int>("Id_TeacherId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Id_SubjectId");
+
+                    b.HasIndex("Id_TeacherId");
 
                     b.ToTable("Classes");
                 });
@@ -70,8 +71,10 @@ namespace Schv3.Migrations
 
             modelBuilder.Entity("Schv3.Models.Group", b =>
                 {
-                    b.Property<int>("GrouoCode")
-                        .ValueGeneratedOnAdd()
+                    b.Property<string>("GroupCode")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("ClassId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Institute")
@@ -90,7 +93,9 @@ namespace Schv3.Migrations
                     b.Property<int>("study_form")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("GrouoCode");
+                    b.HasKey("GroupCode");
+
+                    b.HasIndex("ClassId");
 
                     b.ToTable("Groups");
                 });
@@ -161,9 +166,6 @@ namespace Schv3.Migrations
                     b.Property<int>("Hours")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Id_teacher")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -195,9 +197,40 @@ namespace Schv3.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("SubjectId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("SubjectId");
+
                     b.ToTable("Teachers");
+                });
+
+            modelBuilder.Entity("Schv3.Models.Class", b =>
+                {
+                    b.HasOne("Schv3.Models.Subject", "Id_Subject")
+                        .WithMany()
+                        .HasForeignKey("Id_SubjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Schv3.Models.Teacher", "Id_Teacher")
+                        .WithMany()
+                        .HasForeignKey("Id_TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Id_Subject");
+
+                    b.Navigation("Id_Teacher");
+                });
+
+            modelBuilder.Entity("Schv3.Models.Group", b =>
+                {
+                    b.HasOne("Schv3.Models.Class", null)
+                        .WithMany("Group_Code")
+                        .HasForeignKey("ClassId");
                 });
 
             modelBuilder.Entity("Schv3.Models.Schedule", b =>
@@ -265,6 +298,23 @@ namespace Schv3.Migrations
                     b.Navigation("Id_7Class");
 
                     b.Navigation("Id_8Class");
+                });
+
+            modelBuilder.Entity("Schv3.Models.Teacher", b =>
+                {
+                    b.HasOne("Schv3.Models.Subject", null)
+                        .WithMany("Id_teacher")
+                        .HasForeignKey("SubjectId");
+                });
+
+            modelBuilder.Entity("Schv3.Models.Class", b =>
+                {
+                    b.Navigation("Group_Code");
+                });
+
+            modelBuilder.Entity("Schv3.Models.Subject", b =>
+                {
+                    b.Navigation("Id_teacher");
                 });
 #pragma warning restore 612, 618
         }

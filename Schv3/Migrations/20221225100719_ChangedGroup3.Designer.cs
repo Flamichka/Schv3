@@ -11,8 +11,8 @@ using Schv3.Data;
 namespace Schv3.Migrations
 {
     [DbContext(typeof(AppDataDbContext))]
-    [Migration("20221218103903_new")]
-    partial class @new
+    [Migration("20221225100719_ChangedGroup3")]
+    partial class ChangedGroup3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -73,9 +73,8 @@ namespace Schv3.Migrations
 
             modelBuilder.Entity("Schv3.Models.Group", b =>
                 {
-                    b.Property<int>("GroupCode")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("GroupCode")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Institute")
                         .IsRequired()

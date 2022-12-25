@@ -4,7 +4,7 @@ namespace Schv3.Models
 {
     public class Group
     {
-        [Key][Required] public int GrouoCode { get; set; }
+        [Key][Required] public string GroupCode { get; set; }
         [Required] public int Quantity { get; set; }
         [Required] public string Institute { get; set; }
         [Required] public int course { get; set; }
@@ -12,3 +12,4 @@ namespace Schv3.Models
         [Required] public int study_form { get; set; }
     }
 }
+

@@ -4,13 +4,13 @@
     ViewData["Title"] = "Главная";
 }
 
+
 <!--Project Athena-->
 <body>
     @if (User.Identity.IsAuthenticated)
     {
         <div class="header-menu">
             <a class="btn btn-primary btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="AddSched">Добавление</a>
-
         </div>
         <div class="header-menu">
             <a class="btn btn-primary btn-group-lg rounded-pill" asp-area="" asp-controller="Editor" asp-action="Editor">Редактор</a>

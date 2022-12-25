@@ -158,6 +158,7 @@ namespace Schv3.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            
             migrationBuilder.DropForeignKey(
                 name: "FK_Schedules_Classes_Id_1ClassId",
                 table: "Schedules");
@@ -189,7 +190,7 @@ namespace Schv3.Migrations
             migrationBuilder.DropForeignKey(
                 name: "FK_Schedules_Classes_Id_8ClassId",
                 table: "Schedules");
-
+           
             migrationBuilder.DropIndex(
                 name: "IX_Schedules_Id_1ClassId",
                 table: "Schedules");
